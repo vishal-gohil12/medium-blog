@@ -1,5 +1,5 @@
 import React from "react";
-import { BrowserRouter, Route, Routes } from "react-router-dom";
+import { BrowserRouter, Route, Routes, Navigate } from "react-router-dom";
 import Signin from "./pages/Signin";
 import Signup from "./pages/Signup";
 import Blogs from './pages/Blogs'
@@ -11,6 +11,7 @@ export default function App() {
     <React.Fragment>
       <BrowserRouter>
         <Routes>
+          <Route path="/" element={<Navigate to="/signin" />} />
           <Route path="/signin" element={<Signin />} />
           <Route path="/signup" element={<Signup />} />
           <Route path="/blog/:id" element={<Blog />} />
