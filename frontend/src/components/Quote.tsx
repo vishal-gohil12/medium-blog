@@ -15,6 +15,8 @@ export const Quote = () => {
                 const random = Math.floor(Math.random() * response.data.length);
                 setAuthor(response.data[random].author);
                 setCurrentQuote(response.data[random].text);
+                console.log(quotes);
+
             } catch (error) {
                 console.error("Error fetching quotes", error);
             }
